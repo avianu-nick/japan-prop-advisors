@@ -381,9 +381,6 @@
                     <a href="#services" class="nav-link text-gray-300 hover:text-white">Services</a>
                     <a href="#properties" class="nav-link text-gray-300 hover:text-white">Properties</a>
                     <a href="#contact" class="nav-cta font-semibold">Contact Us</a>
-                    <button id="darkModeToggle" class="dark-mode-toggle">
-                        <i class="fas fa-moon text-white"></i>
-                    </button>
                 </div>
             </div>
         </div>
@@ -634,52 +631,32 @@
 
             <div class="mt-10">
                 <div class="space-y-6">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3 class="text-lg font-medium text-gray-900">Can foreigners really own property in Japan?</h3>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="text-base text-gray-500">
-                                Yes! Unlike many Asian countries, Japan allows foreign nationals to purchase real estate with the same rights as Japanese citizens. There are no restrictions on land or property ownership.
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Can foreigners really own property in Japan?</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Yes! Unlike many Asian countries, Japan allows foreign nationals to purchase real estate with the same rights as Japanese citizens. There are no restrictions on land or property ownership.
+                        </p>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3 class="text-lg font-medium text-gray-900">How much money do I need to invest?</h3>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="text-base text-gray-500">
-                                Properties in Japan can be surprisingly affordable. We've helped clients purchase homes starting from just $20,000 USD. Including renovation and management setup, most clients invest between $30,000-$100,000 USD.
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">How much money do I need to invest?</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Properties in Japan can be surprisingly affordable. We've helped clients purchase homes starting from just $20,000 USD. Including renovation and management setup, most clients invest between $30,000-$100,000 USD.
+                        </p>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3 class="text-lg font-medium text-gray-900">What kind of returns can I expect?</h3>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="text-base text-gray-500">
-                                Our properties typically generate 10-15% annual returns through vacation rentals or long-term tenants. Many clients recoup their initial investment within 24-36 months.
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">What kind of returns can I expect?</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Our properties typically generate 10-15% annual returns through vacation rentals or long-term tenants. Many clients recoup their initial investment within 24-36 months.
+                        </p>
                     </div>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3 class="text-lg font-medium text-gray-900">Do I need to speak Japanese or visit Japan?</h3>
-                            <i class="fas fa-chevron-down faq-icon"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="text-base text-gray-500">
-                                No! Our service is designed specifically for remote investors. We handle all communication, translate documents, and coordinate with local partners. While visiting your property is always welcome, it's not required.
-                            </p>
-                        </div>
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-900">Do I need to speak Japanese or visit Japan?</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            No! Our service is designed specifically for remote investors. We handle all communication, translate documents, and coordinate with local partners. While visiting your property is always welcome, it's not required.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1009,46 +986,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all other items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Toggle current item
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
-
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const icon = darkModeToggle.querySelector('i');
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            body.classList.add('dark-mode');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
         });
     </script>
 </body>
