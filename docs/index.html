@@ -366,6 +366,30 @@
             border-color: #fbbf24;
             box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
         }
+
+        /* Logo Styles */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+            color: #fbbf24;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body class="font-sans">
@@ -374,7 +398,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <span class="text-white text-2xl font-bold">Japan Property Advisors</span>
+                    <a href="#" class="logo">
+                        <i class="fas fa-home logo-icon"></i>
+                        <span class="logo-text">JPA</span>
+                    </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
